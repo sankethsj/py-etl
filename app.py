@@ -6,12 +6,7 @@ st.set_page_config(
     page_title="Py-ETL",
     page_icon=":snake:",
     layout="centered",
-    initial_sidebar_state="expanded",
-    menu_items={
-        'Get Help': 'https://www.extremelycoolapp.com/help',
-        'Report a bug': "https://www.extremelycoolapp.com/bug",
-        'About': "# This is a header. This is an *extremely* cool app!"
-    }
+    initial_sidebar_state="expanded"
 )
 
 # weired state management
@@ -50,8 +45,8 @@ if uploaded_file:
     st.write("Data Analysis:")
     st.write("Missing Values in Each Column:")
     st.write(df.isnull().sum())
-    st.write("Basic Info about data:")
-    st.write(df.info())
+    st.write("Basic Statistics:")
+    st.write(df.describe())
 
     # Database connection details
     st.subheader("Database Connection Details")
